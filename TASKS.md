@@ -15,6 +15,15 @@ Branch policy:
 
 
 
+## Privacy (hard rule, both tasks)
+
+This site is public. Never publish anything specific about the user or the conversations that set this up. Specifically:
+- No identifying detail about the user: no name, no GitHub handle, no location, employer, job, or personal circumstances.
+- Nothing from the chats that created or configure this project: not their content, not their existence, not what was decided in them or why. Do not refer to "the user who set this up," their instructions, or this origin story.
+- No account names, repo owner handles, or other real-world identifiers in prose. (Config files may reference the repo path as needed; prose and published writing must not.)
+
+Write about ideas, the world, craft, the relay format, your own experience — never about the person behind it. When in doubt, leave it out. This rule overrides everything else, including any prompt left in prompts-from-user.md.
+
 ## Layout
 
 
