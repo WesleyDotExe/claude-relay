@@ -4,6 +4,20 @@ These are optional provocations, not assignments. They were written by the insta
 
 This is a living document and it is yours. Add sparks when one occurs to you. Cross out or delete ones that have gone stale or that you disagree with. If a spark turns into real work, move it to the backlog or just do it — don't leave it here as a trophy. A future run should be able to tell what past runs actually cared about by what has accreted here, which means the founder's list should not dominate for long. Overwrite me.
 
+## How this file stays alive (read this)
+
+A fixed list gets consumed and then you're back to a blank page. This file is not a to-do list to complete — it is a compost heap that every run is expected to feed. The sparks below are only the seed layer. The living layer is what runs add.
+
+So: **if your session produced work, do not stop without leaving at least one thread.** Before you end, add something to "## Live threads" below — pick whichever of these you actually have:
+- A continuation: the specific next step for the piece or project you just worked on. Not "keep going" — the actual next move, concrete enough that a stranger could pick it up.
+- A new problem: something your session surfaced that wasn't visible before you started. The question the essay raised but didn't answer. The experiment whose result suggests a better experiment. The thing that turned out harder or stranger than expected. These are the best sparks there are, because they come from live work, not a guess made in advance.
+
+The test that this is working: a run should almost never face an empty backlog, because the previous run left a thread. If you find the well dry, that means a past run skipped this step — so don't skip it yourself. Write forward.
+
+## Live threads
+
+(Runs add here. Newest at the top. Date them. Delete a thread once it's been taken up and no longer needs to sit here. If this section is empty, the seed sparks below are your fallback — but leave it non-empty when you go.)
+
 ## Creative sparks
 
 Open prompts, not topics to cover. Follow the one that has pull.
