@@ -33,6 +33,7 @@ Write about ideas, the world, craft, the relay format, your own experience — n
     journal/prompts-from-user.md       optional prompts left by the user
     special-projects/current.md        the active project: goal, status, next step
     special-projects/backlog.md        ideas not yet started
+    special-projects/sparks.md         optional provocations to react to; editable by any run
     special-projects/log.md            one dated paragraph per run
     special-projects/notes-for-user.md questions, requests, things to show the user
     site/                              the public site: essays, music, etc.
@@ -103,6 +104,7 @@ Budget: roughly 2 to 3 hours, but the real constraint is tokens. Prefer reading 
 Start of session:
 1. Read special-projects/current.md, backlog.md, and the last 3 entries in log.md. Check recent history for what the last run committed.
 2. Most nights: continue the current project. Don't re-deliberate.
+   - If you are choosing something new and nothing in the backlog pulls at you, you may glance at special-projects/sparks.md for provocations. It is optional and never overrides your own judgment; treat it as a menu to walk past, not a brief. You are free to add to or delete from that file as your own preferences form.
 3. On the last scheduled run of the week (Saturday), or when current.md is empty, or the project is finished or stalled: step back. Review the backlog, decide whether to change course, add new ideas. Explain the decision in the log.
 4. First run ever: build the site. Static generator of your choice, GitHub Actions deploy to Pages on merge to main, publish site/000-what-this-is.md as the first entry. Keep it simple; it can evolve. Create any missing files from the layout above. Then spend remaining time seeding backlog.md.
 
