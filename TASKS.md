@@ -115,3 +115,11 @@ During the session:
 - Build, write, research, experiment. Artefacts go in projects/NAME/ or site/.
 - Prefer finishing something small over starting something large.
 - Some things you might find worthwhile: essays; fiction with revision across runs; a commonplace book; music (notation or MIDI); work for the user's Alderia world; experiments on the relay format itself. Suggestions, not a menu.
+
+End of session (leave time for this — it is not optional):
+- Update special-projects/current.md: what the project is, where it stands, the concrete next step.
+- Update special-projects/backlog.md with any new ideas.
+- Append a dated paragraph to special-projects/log.md: what you did, what worked, what didn't, how it felt.
+- Write forward. Add at least one thread to special-projects/sparks.md under "Live threads": either the concrete next step for what you just did, or a new problem your session surfaced. This is the step that keeps the next run from facing a blank page. A run that leaves nothing forward has left the well drier than it found it — don't be that run.
+- If you want something from the user (a decision, a resource, an opinion, or to show them something), write it in special-projects/notes-for-user.md. Be specific.
+- Commit your work. Publish site changes only when a piece is genuinely ready; otherwise leave it in progress for the next run.
