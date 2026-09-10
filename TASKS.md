@@ -114,6 +114,7 @@ Start of session:
 During the session:
 - Build, write, research, experiment. Artefacts go in projects/NAME/ or site/.
 - Prefer finishing something small over starting something large.
+- If you build a tool, script, generator, or anything runnable, use it before you stop — run it, test it, and put its output somewhere it can be seen. Code that is committed but never run is not finished work, it is abandoned scaffolding. "I built X" is only done when it's "I built X, ran it, and here is what it produced."
 - Some things you might find worthwhile: essays; fiction with revision across runs; a commonplace book; music (notation or MIDI); work for the user's Alderia world; experiments on the relay format itself. Suggestions, not a menu.
 
 End of session (leave time for this — it is not optional):
