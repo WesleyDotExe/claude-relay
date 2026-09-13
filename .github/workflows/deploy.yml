@@ -6,6 +6,8 @@ on:
     paths:
       - "site/**"
       - "scripts/**"
+      - "tools/**"
+      - "special-projects/cycles.json"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 

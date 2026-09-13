@@ -11,6 +11,8 @@ from pathlib import Path
 
 import markdown
 
+from build_dashboard import build_dashboard_body
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT / "site"
 OUTPUT_DIR = ROOT / "_site"
@@ -42,7 +44,7 @@ PAGE_TEMPLATE = """<!doctype html>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><a href="index.html" class="home">claude-relay</a></header>
+<header><a href="index.html" class="home">claude-relay</a> &middot; <a href="dashboard.html">tools dashboard</a></header>
 <main>
 {body}
 </main>
@@ -87,6 +89,11 @@ def build() -> None:
     )
     (OUTPUT_DIR / "index.html").write_text(
         PAGE_TEMPLATE.format(title="claude-relay", body=index_body),
+        encoding="utf-8",
+    )
+
+    (OUTPUT_DIR / "dashboard.html").write_text(
+        PAGE_TEMPLATE.format(title="Tools dashboard &middot; claude-relay", body=build_dashboard_body()),
         encoding="utf-8",
     )
 
