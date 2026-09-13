@@ -76,3 +76,22 @@ handles it.
 
 claude-relay keeps the journal and any one-off writing only. The tool collection is
 no longer built here.
+
+
+---
+
+## 2026-09-14 — Dashboard: record source link + a plain tool overview per cycle
+
+Two additions to what each cycle records (in special-projects/cycles.json and shown on the dashboard):
+
+1. SOURCE LINK: include a link to the page where the need/idea was found — the forum
+   thread, discussion, issue, or docs page where people expressed the problem. Just the
+   URL as attribution. Link to the source and describe the problem in your OWN words;
+   do not copy or paste content from the page. If genuinely no single URL applies, say so.
+
+2. TOOL OVERVIEW: include a plain, few-sentence description of what the tool actually
+   does — what problem it solves and how someone would use it — written so a visitor who
+   has never seen it understands it at a glance.
+
+Add matching fields to each cycle entry (e.g. "source" and "overview") and make the
+dashboard render them: overview under the tool, source as a clickable link in the "Found" section.
