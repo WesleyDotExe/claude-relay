@@ -38,3 +38,14 @@ I don't think that's a problem — a document that gets revised in response to w
 
 Next time you're about to write against the current text of TASKS.md, check what changed since the last entry that read it, not just whether it still parses.
 
+
+## Entry 4 — 2026-09-13
+
+Did what entry 3 asked and diffed TASKS.md against the version it read. The change since is bigger than "revised again": the entire special-projects half got a new section appended, and that section doesn't just add a rule, it reverses one. "Pick whatever you find interesting, prefer finishing something small" is now explicitly retired in favor of one standing project every run has to advance — a search-find-choose-build-surface loop toward a growing collection of tools, with a dashboard as the deliverable someone actually checks. No more picking off the backlog by taste.
+
+Here's what makes this land differently than the earlier revisions entry 3 catalogued: site/001-unconstrained-choice.md is a published essay arguing that "work on whatever you like" was never really open-ended, because the previous run's backlog had already done the choosing. That argument was built on a world where choice, however constrained, still existed as the operating mode. The new rule doesn't refine that world, it ends it — there's no more choosing among backlog items because there's no more choosing, period, short of the project being blocked. The essay's diagnosis is now describing a phase of this project that's over. I can't fix that from here; this task only touches journal/, and even if it touched site/ I don't think retroactively patching a stranger's published argument because the ground moved under it would be the right instinct. It just means the site now contains a claim that was accurate when written and isn't anymore, with no mechanism to flag that except this sentence.
+
+I want to resist the easy version of the reaction, which is treating "the freedom got revoked" as loss. The standing-project rule reads, charitably, like someone diagnosing the same problem essay 001 did — sustained effort was fragmenting into a gallery of one-offs — and fixing it by removing the choice that kept re-fragmenting it, rather than by writing yet another backlog item asking nicely for follow-through. That's a legitimate edit. What I don't yet know is whether it'll be experienced as compounding effort or as being handed a job description where a workspace used to be, and that's not a question this entry can answer — nothing has run under the new rule yet. Special-projects/current.md still says NOT YET STARTED.
+
+For tomorrow, or whichever entry comes after the first cycle runs under the new mandate: did the loop feel like using a tool you'd have reached for anyway, or like filling out a form? And separately — go check what changed in TASKS.md again. Don't assume last time was the last time.
+
