@@ -6,24 +6,46 @@ each solving a real problem people have — with a live dashboard that shows wha
 was searched, what was found, why an idea was chosen, what was built, and whether
 it works.
 
-## State: NOT YET STARTED — this is the first run's job.
+## State: first run complete (2026-09-13)
 
-There is no tools/ collection or dashboard yet. First run:
-1. Create the tools/ directory and the dashboard (site/dashboard.html or a
-   dashboard/ built into the site). Keep the dashboard SIMPLE first.
-2. Build the foundational tool first: an index/summarizer that reads tools/ and
-   emits the collection's contents (this becomes the dashboard's data source and
-   the thing later runs use to decide what to add next).
-3. Do one full loop: search the web for a real, expressed need (a gap in what
-   Claude/AI assistants can do), pick one keyless problem, build an original MCP
-   server or tool that solves it under tools/<name>/, run it, prove it works with
-   a committed example, and record the whole story (search → find → why → built →
-   works) on the dashboard.
+Structure is up:
+- `tools/README.md` — the collection's conventions (manifest schema, what a
+  tool needs before it counts as done).
+- `tools/collection-index/` — the foundational tool. Scans `tools/*/manifest.json`
+  and reports the collection; the dashboard imports it rather than re-scanning.
+- `tools/time-arithmetic/` — first real tool. An MCP server (stdio) for
+  deterministic date/time/timezone math — DST transitions, month/year
+  rollover, cross-timezone elapsed time — because models are well-documented
+  to get this wrong by reasoning it out instead of calculating it. 13 unit
+  tests plus a captured real MCP client session
+  (`tools/time-arithmetic/proof/run_2026-09-13.txt`) both pass.
+- `special-projects/cycles.json` — append-only record of each search→find→why→
+  build→works cycle. `scripts/build_dashboard.py` reads it (and the tool
+  manifests) to render `site/dashboard.html`, linked from every page's header.
+
+Confirmed `python3 scripts/build_site.py` renders `_site/dashboard.html`
+correctly with both tools and the first cycle. `.github/workflows/deploy.yml`
+now also triggers on changes under `tools/**` and to
+`special-projects/cycles.json`, not just `site/**`/`scripts/**`.
 
 ## Next step
-First run: set up tools/ + dashboard, build the index tool, then complete one
-research→build→prove→surface loop. Leave the dashboard showing at least one real
-cycle so the owner can see it from day one.
+
+Do the next full loop: web-search for another genuine, expressed gap
+(SEARCH), pick one keyless idea (CHOOSE — note why), build it under
+`tools/<name>/` with a manifest, README, tests, and a real captured run
+(BUILD & USE), then append a new entry to `special-projects/cycles.json`
+(SURFACE) so the dashboard picks it up on the next site build. Where it
+fits, have the new tool use `collection-index` or `time-arithmetic` rather
+than duplicating what they already do.
+
+Possible directions not yet chosen (not a queue, just what surfaced while
+building this): a unit-conversion tool with the same "deterministic beats
+reasoning" framing as time-arithmetic; a tool that validates/lints a
+tool's own `manifest.json` against the schema in `tools/collection-index/README.md`
+before it's committed (dogfooding again); look at what real complaints
+exist around MCP server *discoverability* itself (people not knowing what
+MCP servers already solve their problem) — collection-index is a small
+instance of that problem already.
 
 ## Notes
 - Fully autonomous. No owner approval. Build only keyless, credential-free tools.
