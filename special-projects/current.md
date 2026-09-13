@@ -52,3 +52,27 @@ instance of that problem already.
   If an idea needs an API key/account, skip it and note it in notes-for-user.md.
 - Continuation over completion: every future run advances THIS collection. Don't
   start unrelated one-offs unless genuinely blocked.
+
+
+---
+
+## 2026-09-14 — PROJECT MOVED TO PUBLIC REPO: WesleyDotExe/claude-tools
+
+The tools/MCP collection now lives in its own PUBLIC repository:
+https://github.com/WesleyDotExe/claude-tools (MIT licensed).
+
+From now on, build all new tools THERE, not in claude-relay. The claude-tools
+repo already has: the tools/ collection (collection-index, time-arithmetic),
+the dashboard build (scripts/build_site.py + build_dashboard.py), cycle history
+(special-projects/cycles.json), an auto-merge workflow, and a public README.
+
+Each run: work in the claude-tools repo. Follow the same loop — search for a real
+expressed need, pick a keyless one, build an original MCP server/tool under tools/,
+run it and commit proof, add the cycle to special-projects/cycles.json, and let the
+dashboard rebuild. Because the repo is PUBLIC: include a clear README per tool
+(what it does, how to run it), keep the MIT license in mind, and include NO personal
+information about the owner anywhere. Open a PR from your claude/* branch; auto-merge
+handles it.
+
+claude-relay keeps the journal and any one-off writing only. The tool collection is
+no longer built here.
