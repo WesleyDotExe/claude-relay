@@ -124,3 +124,34 @@ End of session (leave time for this — it is not optional):
 - Write forward. Add at least one thread to special-projects/sparks.md under "Live threads": either the concrete next step for what you just did, or a new problem your session surfaced. This is the step that keeps the next run from facing a blank page. A run that leaves nothing forward has left the well drier than it found it — don't be that run.
 - If you want something from the user (a decision, a resource, an opinion, or to show them something), write it in special-projects/notes-for-user.md. Be specific.
 - Commit your work. Publish site changes only when a piece is genuinely ready; otherwise leave it in progress for the next run.
+
+
+---
+
+# SPECIAL PROJECTS — STANDING PROJECT (overrides the general "pick anything" guidance above)
+
+Special projects now has ONE standing main project that every run advances by default. This replaces the earlier "pick whatever, prefer finishing something small" culture. The goal is a large thing built cumulatively over many runs, not a gallery of one-offs.
+
+## The project: a growing collection of MCP connectors and tools for Claude, each solving a real problem people have.
+
+Every run follows this loop and records each step for the dashboard:
+
+1. SEARCH: web-search for a genuine, expressed need — especially gaps in what AI assistants / Claude can do ("I wish Claude could…", "is there an MCP for…", repetitive tasks people complain about). Look for real, recurring problems. Record the search queries you used.
+2. FIND: note what you found — the actual problem/need, in your own words. Never copy or republish anyone's content; identify the pattern, build an original solution.
+3. CHOOSE: pick ONE need this project can address with a tool or MCP server that is buildable in this sandbox and needs NO external credentials or paid accounts (MCP servers, keyless public-data wrappers, code/text/data utilities). Record WHY you chose this one.
+4. BUILD & USE: build it under tools/<name>/. Run it, prove it works with a real example committed alongside it. Where an existing tool in the collection can help you build or test this one, use it — the collection should increasingly build on itself (this is encouraged, not mandatory).
+5. SURFACE: update the dashboard (see below) with this cycle's story: the search, the find, the why, what you built, and the proof it works.
+
+Continuation over completion: leave the collection further along and more capable than you found it. Do NOT start unrelated one-off pieces unless the main project is genuinely blocked (if truly blocked, an essay is an acceptable fallback — note why in the log).
+
+Fully autonomous: no owner approval needed. If a tool would need an API key or account the owner must provide, DO NOT build that one — pick a keyless problem instead, and note the credential-needing idea in notes-for-user.md for the owner to consider. Never add or request credentials yourself.
+
+## The dashboard (core deliverable — the owner checks this via a bookmark)
+
+A static page at site/dashboard.html (or dashboard/ built into the site) that tells the story of what this project is doing. For each cycle, newest at top, show: what was SEARCHED, what was FOUND, WHY that idea was chosen, WHAT was built, and DOES IT WORK (with the proof/example). Also a list of all tools built so far and what each solves.
+
+Build it SIMPLE first (a plain readable page listing cycles + tools), then improve it over time. Build it using the collection's own tools where possible (e.g. a tool that reads the repo and emits the dashboard data) — the dashboard should dogfood the toolkit.
+
+## First run's job
+
+Set up the structure: create tools/ and the dashboard. Build the FIRST foundational tool — an index/summarizer that reads the tools/ collection and outputs its contents — and use it to generate the initial dashboard. Then do one full loop above (search → build one real tool → surface it). This gives the owner something to look at from day one.
