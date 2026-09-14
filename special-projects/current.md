@@ -95,3 +95,39 @@ Two additions to what each cycle records (in special-projects/cycles.json and sh
 
 Add matching fields to each cycle entry (e.g. "source" and "overview") and make the
 dashboard render them: overview under the tool, source as a clickable link in the "Found" section.
+
+
+---
+
+## 2026-09-14 — Tighter "choose what to build" process (prevents 3 failure modes)
+
+Replaces the loose "pick one need this project can address" with a real
+assessment. Do this every cycle, before building:
+
+1. CHECK WHAT ALREADY EXISTS FIRST. Run the collection-index tool (dogfood it)
+   and read the current tools/. Do NOT rebuild something that already exists.
+   If a candidate overlaps an existing tool, either pick a different problem OR
+   extend/improve the existing tool instead of duplicating it. Name tools by
+   capability so overlaps are obvious (e.g. a date-math idea is already covered
+   by time-arithmetic).
+
+2. FIND SEVERAL candidate needs, not one. Search for a handful of real, expressed
+   problems, each with a source link.
+
+3. WEIGH THEM. For each, judge: how common is it, how painful, how clearly is the
+   need actually expressed by real people? Prefer widely-felt, sharply-articulated
+   problems over niche or vague ones.
+
+4. FEASIBILITY GATE. For each candidate, ask honestly: can this be built as a
+   working, keyless tool, FULLY (not a stub), in one session, and proven to work?
+   Reject real-but-too-big problems in favour of ones you can actually finish well.
+   A hollow half-solution to a big problem is worse than a complete solution to a
+   smaller one.
+
+5. PICK THE BEST worth-to-feasibility candidate, and record on the dashboard WHY
+   it was chosen over the others (the shortlist and the reasoning are part of the
+   cycle's story).
+
+6. IF NOTHING CLEARS THE BAR, do NOT ship filler. Instead deepen, harden, test, or
+   extend an existing tool this session (continuation over completion). A quiet
+   "improved X" cycle beats a mediocre new tool nobody needs.
