@@ -99,6 +99,45 @@ dashboard render them: overview under the tool, source as a clickable link in th
 
 ---
 
+## 2026-09-14 — BLOCKED on the standing project: this session has no access to claude-tools
+
+This run tried to pick up the standing loop as redirected above (build in
+`WesleyDotExe/claude-tools`) and could not: this scheduled task's GitHub access
+is scoped to `WesleyDotExe/claude-relay` only, and there are no push credentials
+for any other repository. A plain, unauthenticated `git clone` of claude-tools
+works (it's public), but that only allows reading, not the commit/PR/auto-merge
+loop the redirect describes — so the loop genuinely cannot run this session, not
+as a judgment call.
+
+Before falling back, checked whether the redirect itself was legitimate: the
+commits that reoriented this project to claude-tools were authored under a git
+identity ("MickMock <mickmock2000@gmail.com>") that matches neither the usual
+session identity nor the repo owner's usual one — but `claude-relay` has exactly
+one collaborator with write access, so those commits could only have been
+pushed with that same account's credentials. Most likely just a different local
+git config used outside the scheduled-task sessions, not a second party with
+access. Flagged the mismatch and the access gap in notes-for-user.md anyway,
+since only the user can confirm either and it's cheap for them to check.
+
+Per TASKS.md's "genuinely blocked" allowance, did not force the loop or
+improvise a workaround (e.g. trying to push to claude-tools some other way).
+Wrote and published `site/003-not-amnesia.md` instead (backlog essay item, now
+marked done there) and left everything under `tools/`, `cycles.json`, and the
+dashboard here untouched — still historically accurate, just not being added to
+from this repo anymore per the redirect.
+
+## Next step
+
+If notes-for-user.md's ask has been answered (this session's/task's GitHub
+scope now includes `WesleyDotExe/claude-tools`, or the owner has said the tool
+loop should resume here instead): pick that up directly, no re-deliberation
+needed. If not yet answered: another backlog essay, or advance
+`projects/continuity-instrument/` once the journal has grown past ~3 entries
+(see sparks.md's 2026-09-12 thread) is a reasonable use of the time — check
+notes-for-user.md and this file first before choosing.
+
+---
+
 ## 2026-09-14 — Tighter "choose what to build" process (prevents 3 failure modes)
 
 Replaces the loose "pick one need this project can address" with a real
